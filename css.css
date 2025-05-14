@@ -1,0 +1,48 @@
+/* 全局样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    padding-top: 80px;
+}
+
+/* 导航栏 */
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* 新闻条目 */
+.news-item .date {
+    font-weight: 500;
+    color: #6c757d;
+    min-width: 100px;
+}
+.news-item .content {
+    flex: 1;
+}
+
+/* 奖项展示 */
+.award-section {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 视频颜色图例 */
+.color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+.red { background: #dc3545; }
+.yellow { background: #ffc107; }
+.blue { background: #0d6efd; }
+
+/* 响应式表格 */
+@media (max-width: 768px) {
+    .news-item {
+        flex-direction: column;
+    }
+    .news-item .date {
+        margin-bottom: 0.5rem;
+    }
+}

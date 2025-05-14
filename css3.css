@@ -1,0 +1,46 @@
+/* css/style.css */
+/* 项目描述样式 */
+.project-description h1 {
+    color: #2c3e50;
+    border-bottom: 3px solid #0d6efd;
+    padding-bottom: 1rem;
+}
+
+.principle-card {
+    border-left: 4px solid #20c997;
+    transition: transform 0.3s;
+}
+.principle-card:hover {
+    transform: translateX(10px);
+}
+
+.feature-list {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+.feature-list li::before {
+    content: "▹";
+    color: #0d6efd;
+    margin-right: 0.8rem;
+}
+
+/* 技术实现 */
+.technical-implementation h2 {
+    color: #2c3e50;
+    margin-top: 2rem;
+}
+.implementation-steps h4 {
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .project-description h1 {
+        font-size: 2rem;
+    }
+    .principle-card {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}

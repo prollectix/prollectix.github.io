@@ -1,0 +1,50 @@
+/* 出版物卡片 */
+.pub-card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+.pub-card:hover {
+    transform: translateY(-3px);
+}
+
+.pub-card .card-title {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.pub-meta {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+.pub-meta .authors {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.pub-meta .conf {
+    display: inline-block;
+    background: #f8f9fa;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+}
+.badge {
+    vertical-align: super;
+    font-size: 0.8rem;
+}
+
+.pub-content p {
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .pub-card .card-title {
+        font-size: 1.2rem;
+    }
+    .pub-meta .conf {
+        display: block;
+        margin-top: 0.5rem;
+    }
+}

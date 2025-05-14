@@ -1,0 +1,47 @@
+/* css/style.css */
+/* 视频容器 */
+.video-container {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 6px rgba(0,0,0,0.1);
+}
+
+/* 颜色图例 */
+.color-legend {
+    border-left: 4px solid #0d6efd;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.color-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.red { background: #dc3545; }
+.yellow { background: #ffc107; }
+.blue { background: #0d6efd; }
+
+/* 模拟信息 */
+.simulation-info {
+    border-top: 3px solid #20c997;
+}
+.simulation-info h5 {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .video-container {
+        padding: 1rem;
+    }
+    .color-box {
+        width: 20px;
+        height: 20px;
+    }
+}

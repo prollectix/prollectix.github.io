@@ -1,1 +1,312 @@
-Prollectix: Preemptive Holistic Collaborative System
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prollectix: Preemptive Holistic Collaborative System - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --gradient-bg: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+            padding-top: 80px;
+            background: #f8f9fa;
+        }
+
+        /* 导航栏优化 */
+        .navbar {
+            background: var(--gradient-bg) !important;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.1rem;
+            max-width: 70%;
+            letter-spacing: -0.5px;
+        }
+        .nav-link {
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 2px;
+            background: rgba(255,255,255,0.8);
+        }
+
+        /* 轮播图全面重构 */
+        .carousel-container {
+            margin: 80px auto 0;
+            max-width: 1200px;
+            padding: 0 15px;
+        }
+        .carousel-inner {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 560px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .carousel-item {
+            height: 100%;
+            position: relative;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            min-width: 100%;
+            min-height: 100%;
+        }
+        .carousel-indicators {
+            bottom: 20px;
+        }
+        .carousel-indicators [data-bs-target] {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 6px;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 8%;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+        }
+        .carousel-caption {
+            background: rgba(0,0,0,0.7);
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 30px;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 8px;
+            padding: 1.2rem;
+        }
+        .carousel-caption p {
+            font-size: 1.1rem;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* 项目简介 */
+        .project-intro h1.display-4 {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .erc-info {
+            border-left: 3px solid var(--accent-color);
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .impact-card {
+            transition: transform 0.3s ease;
+            border: none;
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .impact-card:hover {
+            transform: translateY(-5px);
+        }
+        .impact-card .card-body {
+            padding: 1.5rem;
+        }
+        .impact-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* 最新新闻 */
+        .latest-news {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .table-hover tbody tr {
+            transition: all 0.2s ease;
+        }
+
+        /* 页脚 */
+        footer {
+            background: var(--gradient-bg);
+            margin-top: 4rem;
+            padding: 2rem 0;
+        }
+        footer p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .carousel-inner {
+                height: 400px;
+            }
+            .carousel-caption {
+                bottom: 15px;
+                padding: 0.8rem;
+            }
+            .carousel-caption p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 0.95rem;
+            }
+            .carousel-inner {
+                height: 300px;
+            }
+            .project-intro h1.display-4 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Preemptive Holistic Collaborative System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="description.html">Description</a></li>
+                    <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="distinctions.html">Distinctions</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 轮播图 -->
+    <div class="carousel-container">
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="home1.png" class="d-block w-100" alt="Traffic Simulation">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>The proportion of transportation modes globally involved in causing traffic accidents</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="home2.png" class="d-block w-100" alt="Research Team">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Deployment method of Road Section Management Units at highway ramp exits.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="home3.png" class="d-block w-100" alt="Data Visualization">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>The diagram for selecting the reference line of a highway with an integral roadway profile.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <main class="container mt-5">
+        <section class="project-intro mb-5">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <h1 class="display-4">Preemptive Holistic Collaborative System</h1>
+                    <p class="lead">Preemptive Holistic Collaborative System</p>
+                    
+                    <div class="erc-info bg-light p-4 rounded">
+                        <p>This study proposes a novel spatiotemporal cooperative control approach with vehicle-road coordination, calculating safe distances, constructing a conflict risk model, and formulating a mainline priority control method for pre-planned trajectories. Simulations validate its effectiveness, achieving a 97.96% average delay reduction and 6.01% fuel consumption decrease to enhance merging efficiency and performance.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="impact-card card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h5 mb-4">Project Impact</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-4">
+                                    <p class="mb-0">By proactively planning spatiotemporal trajectories based on the intentions of all vehicles, conflicts between vehicles are eliminated in advance.</p>
+                                </li>
+                                <li class="mb-4">
+                                    <p class="mb-0">When traffic volume is high, the average vehicle delay time can be reduced by up to 97.96%, and fuel consumption can be reduced by up to 6.01%.</p>
+                                </li>
+                                <li class="mb-4">
+                                    <p class="mb-0">The delay can be reduced by more than 90%, and the traffic capacity can be increased by more than 300%.</p>
+                                </li>
+                                <li>
+                                    <p class="mb-0">According to the National Motor Vehicle Accident Causation Survey Report in the United States, the use of a preemptive holistic collaborative approach can eliminate over 90% of traffic accidents.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-news">
+            <h2 class="mb-4">Latest Updates</h2>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <tbody>
+                        <tr>
+                            <td class="fw-bold"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold"></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container text-center">
+            <p class="mb-0"></p>
+            <p class="mb-0"></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
